@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for i in {1..5}
+do
+     rm $i
+done
+
+
+
+## This script removes 5 folders in a folder which are each named between 1-5
