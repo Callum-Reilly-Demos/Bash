@@ -1,0 +1,24 @@
+# !/bin/bash
+# Author: Callum Reilly
+# Date: 31/05/2021
+# Modified: 31/05/2021
+
+
+# set a = the name of your vm, ` marks must be included so string isn't taken literally to return hostname
+
+a=`hostname`
+
+# echo's display text in the shell, an echo without following text is used for a line space
+
+  echo Hello, my server name is $a
+  echo 
+  echo What is your name? 
+  echo 
+  read b
+  echo 
+  echo Nice to speak to you $b 
+  echo
+  echo
+
+
+~       
