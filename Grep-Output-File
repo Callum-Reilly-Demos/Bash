@@ -1,0 +1,13 @@
+#!/bin/bash
+#Author: Callum.Reilly
+#Modified: 31/05/2021
+#Created: 30/05/2021
+# Desc: This script will pull only Error messages from var/log/messages, then output to a text file we can cat from in shell. 
+
+
+#grep = Global Regular Expression Print, searches for a string of characters inside a file, 
+
+# -i is an operator to ignore casing in the file grep is looking through 
+
+grep -i error /home/callum/RealLifeScripts/messages > /home/callum/RealLifeScripts/output-error
+
