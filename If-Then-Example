@@ -1,0 +1,19 @@
+#!/bin/bash
+#Author: Callum.Reilly
+#Created:  30/05/2021
+#Modified: 30/05/2021
+
+#Description:  This script checks if a file is present in a location on 
+a server and returns an indication in the shell. 
+
+Clear
+if [ -e /home/callum/Callum-Test-Folder/error.txt ]
+
+        then
+        echo "File exists"      
+        else
+        echo "File not found"
+fi
+
+o
+
