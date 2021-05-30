@@ -1,0 +1,21 @@
+#!/bin/bash
+#Author: Callum Reilly
+#Modified: 30/05/2021
+#Created: 30/05/2021
+#Ping Google DNS, but show no output 
+
+
+#dev nul is a dead folder in linux, used to pipe output to if you dont want 
+#to see a section of it. 
+
+## removing the &> /dev/null will cause ping output to appear in the shell
+# -c1 operator means ping with a count of 1, 
+
+
+ping -c1 8.8.8.8 &> /dev/null
+        if [ $? -eq 0 ]
+        then
+        echo DNS Server is responding
+        else
+        echo DNS Server is unreachable
+        fi
