@@ -1,0 +1,8 @@
+#!/bin/bash
+#Author: Callum Reilly
+#Created: 31/05/2021 
+#Desc: This script will delete files older than 90 days 
+
+#find items in this folder that are 90+ days old, then delete. 
+
+find /home/callum/Scripts/ -mtime +90 -exec rm {} \;
