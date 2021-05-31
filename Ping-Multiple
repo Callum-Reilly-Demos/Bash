@@ -1,0 +1,29 @@
+#!/bin/bash
+#Author: Callum.Reilly
+#Created: 31/05/2021
+#Modifed: 31/05/2021
+#Description: This script pings a selection of hosts from a file. 
+#cat = read items from file, so for every ip found when reading the hosts file, do this loop.
+# all ifs must end in fi's, all do's must end in done's 
+#
+
+
+hosts="/home/callum/Scripts/myhosts"
+
+
+for ip in $(cat $hosts)
+
+do
+
+        ping -c1 $ip &> /dev/null
+        if [ $? -eq 0 ]
+        then
+        echo $ip is operational
+        else
+        echo $ip is not responding
+        fi
+done
+
+
+
+
