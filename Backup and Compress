@@ -1,0 +1,30 @@
+#!/bin/bash
+#Author: Callum Reilly
+# Date: 31/05/2021
+# Modified: 31/05/2021
+# Description: back up /var and /etc
+
+# create an archive file, c is new archive v showput and f is point output to folder
+tar cvf /tmp/backup.tar /etc /var
+
+
+# create a compressed version of the above tar
+gzip backup.tar
+
+
+#find todays backup, if it exists, ignore the output but continue with the if
+#statement.
+find backup.tar.gz -mtime -1 -type f -print &> /dev/null
+
+#if find was successful, print notification to the shell, then send backup.tar to another location.
+#Line 26 # for testing
+if [ $? -eq 0 ]
+        then
+        echo Backup was created
+        echo
+        echo Archiving Backup
+        #scp /tmp/Backup.tar.gz root@192.168.1.x/path
+        else
+        echo Backup failed
+
+fi
