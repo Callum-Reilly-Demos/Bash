@@ -42,8 +42,17 @@ grep -i "function" /home/callum/Scripts/
  
 find items in current directory with a type of "file" with a name containing .PH
  
--iname can be used to ignore casing
+-iname can be used to ignore casing, -size file less than a certain size 
  
 find . -type f -name "*.php" 
 
 ----------------------------------------------------------------------------------------------------------
+
+GREP and FIND together 
+
+## find all files in the current directory that contain .php, then execute this with the next command 
+## 
+find . -type f -iname "*.php" -exec grep -i -n "function {}+
+
+
+
