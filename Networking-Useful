@@ -1,0 +1,62 @@
+
+ping     = same syntax as ping in Windows
+
+ifconfig = -eq IPconfig in Windows 
+
+------------------------------------------------------------------------------------------
+TCPDump = Shell local packet sniffer,
+
+installed with  "sudo -apt get install TCPdump" 
+
+sudo tcpdump  -c 10 (switch will capture the first 10 packets) 
+              -A (Print packet literraly in ASCII) 
+              -i Wlo1 (Switch to listen only on a specific interface) 
+              -xx (print in Hex) 
+              -i wlo1 port 22: specific interface and specific port
+              
+              
+------------------------------------------------------------------------------------------
+Netstat = same operation as windows 
+
+
+          -nr will print connected IP addresses rather than Domain name 
+          -i usage stats per interface 
+          -a live connections, same as windows 
+          
+------------------------------------------------------------------------------------------
+Traceroute = Tracert in windows, displays all routing hops between local machine and 
+destination server 
+
+* * * request has timed out on server, will try another route  
+
+'sudo apt-get install traceroute' to install 
+
+------------------------------------------------------------------------------------------
+
+NMAP = Network Mapper
+
+'sudo apt-get install nmap' to install 
+
+
+nmap 192.168.0.100 -> will show all open ports and what services they offer and time taken for scan. 
+ 
+                      -v more details than standard, verbose 
+                      
+                      
+                      
+                      
+nmap 192.168.0.100,101 -> multiple scans 
+
+               100-200 -> scan a range of addresses
+               
+               
+               
+               
+               
+ 
+
+
+
+
+
+
