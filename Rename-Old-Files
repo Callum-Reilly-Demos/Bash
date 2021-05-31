@@ -1,0 +1,11 @@
+#!/bin/bash
+#Author: Callum Reilly
+#Created: 31/05/2021 
+#Desc: This script will delete files older than 90 days 
+
+
+
+
+# Search for files in directory which are 90 days +, then rename the returned items as their own name, with a .old suffix 
+
+find /home/callum/Scripts/ -mtime +90 -exec mv {} {}.old \;
