@@ -14,7 +14,7 @@ gzip backup.tar
 
 #find todays backup, if it exists, ignore the output but continue with the if
 #statement.
-find backup.tar.gz -mtime -1 -type f -print &> /dev/null
+find /tmp/backup.tar.gz -mtime -1 -type f -print &> /dev/null
 
 #if find was successful, print notification to the shell, then send backup.tar to another location.
 #Line 26 # for testing
