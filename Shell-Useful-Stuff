@@ -1,0 +1,49 @@
+##########################################################################################################
+Template to start scripts 
+----------------------------------------------------------------------------------------------------------
+
+# !/bin/bash
+# Author: Callum Reilly
+# Created: 
+# Modified: 
+# Description 
+
+----------------------------------------------------------------------------------------------------------
+
+
+
+CD = Change Directory: same as Windows,  ../ -> up one level, .. -> down one level, ./ -> current dir, reletive
+path.
+
+Chmod = Change permissions on file, a+x = make this executable
+
+Clear = Clear Terminal 
+
+ls = list contents of directory, -l show permissions, owner and group, -a = show hidden files, -ltr = last 
+modified first in list 
+
+PWD = Print Working Directory: Displays current directory, Linux equiv of windows solely typing 'cd'
+
+RM = remove files, -d for removing directories
+
+touch = creates files
+
+
+##########################################################################################################
+GREP & FIND
+----------------------------------------------------------------------------------------------------------
+
+grep = finds things in files, Find = find files -i ignores casinig 
+
+## E.g
+grep -i "function" /home/callum/Scripts/
+
+---------------------------------------------------------------------------------------------------------
+ 
+find items in current directory with a type of "file" with a name containing .PH
+ 
+-iname can be used to ignore casing
+ 
+find . -type f -name "*.php" 
+
+----------------------------------------------------------------------------------------------------------
