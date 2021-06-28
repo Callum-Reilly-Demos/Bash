@@ -1,0 +1,45 @@
+sed id's/Kenny/Lenny/g' seinfeld-characters 
+
+
+#sinsert substitute Kenny for Lenny Globally in the seinfeld characters file 
+
+
+sed -i 's/Costanza//g' seinfeld-characters
+
+#  // removes all Costanzas
+
+
+sed '/Seinfeld/d' seinfeld-characters 
+
+
+#    /d deletes all lines with Seinfeld
+
+
+
+sed '/^$/d' seinfeld-characters 
+
+#  ^ starting with $ ending with, removes all empy lines as command deletes everything that starts and ends with nothing.
+
+
+sed -i '1,2d' seinfeld-characters
+# deletes both first and second line from file 
+
+
+
+sed -i 's/\t/ /g' seinfeld-characters 
+
+
+## removes all tabs from a file and replaces with spaces
+
+
+
+sed -i 's/ /\t/g' seinfeld-characters 
+
+# replace any spaces with tabs
+
+
+
+
+sed -n 12,18p seinfeld-characters 
+
+## show all lines from 12-18
