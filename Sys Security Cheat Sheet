@@ -1,0 +1,57 @@
+### Check User Accounts privileges
+
+cat /etc/users will give you groups, ID, home dir info
+
+password expiry (chage -le)
+
+cat /etc/shadow to see the above configuration 
+
+cat /etc/login → password complex policy
+
+/etc/pam.d/system.auth → other paramaters 
+
+### Remove unwanted packages
+
+rpm -qa to check packages 
+
+rpm -qa | wc -l to give a line count 
+
+rpm -e *package name* to remove a package
+
+### Stop unused services
+
+systemctl -a (shows all active and inactive services) 
+
+### Check open ports
+
+netstat -tunlp (shows all open listening ports)
+
+### check SSH config
+
+/etc/ssh/sshd.config defines the parametres for ssh on the system
+
+change the port away from 22 
+
+turn off root login 
+
+### Enable firewalld
+
+permit or deny traffic from sources
+
+firewall-config GUI config firewall
+
+firewall-cmd —help for cli based firewall
+
+iptables (old old old) 
+
+### SELinux
+
+security enhanced linux (lsm module) sc-status (check if running) 
+
+controls permission access of processes
+
+### keep OS up to date
+
+sudo apt update / upgrade
+
+yum update / upgrade
