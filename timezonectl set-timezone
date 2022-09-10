@@ -1,0 +1,5 @@
+timedatectl list-timezones | grep london
+#Europe/London
+sudo timedatectl set-timezone Europe/London
+#search for the the full identifier for your timezone 
+#set system timezone as London
