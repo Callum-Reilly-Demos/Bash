@@ -1,0 +1,4 @@
+Sudo crontab -u User -e
+## set up a new cron job as User and edit it 
+20 17 * * * /bin/echo "Please fill out your timesheet"
+## send mail at 8:17pm with a timesheet reminder. 
