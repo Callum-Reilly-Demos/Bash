@@ -1,0 +1,31 @@
+
+#Adds user PhilCoutinho
+[root@centos-vm CallumReilly]# useradd PhilCoutinho
+
+#Checks PhilCoutinho UID and GID
+[root@centos-vm CallumReilly]# id PhilCoutinho
+uid=1008(PhilCoutinho) gid=1008(PhilCoutinho) groups=1008(PhilCoutinho)
+
+#Checks for entry of PhilCoutinho in the etc passwd file, displays UID, GID, Home Dir and Default Shell.
+[root@centos-vm CallumReilly]# grep PhilCoutinho /etc/passwd
+PhilCoutinho:x:1008:1008::/home/PhilCoutinho:/bin/bash
+
+#Checks entry for PhilCoutinho in /etc/shadow, password is encrypted, date of last pw change, min pass age, max pass age
+[root@centos-vm CallumReilly]# grep PhilCoutinho /etc/shadow
+PhilCoutinho:!!:19251:0:99999:7:::
+
+#Resets password for Phil Coutinho, would block on a normal user for a bad password, but Root is allowed to set it to less that 7 char
+[root@centos-vm CallumReilly]# passwd PhilCoutinho
+Changing password for user PhilCoutinho.
+New password:
+BAD PASSWORD: The password is shorter than 7 characters
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@centos-vm CallumReilly]#
+
+
+
+
+
+
+
