@@ -1,0 +1,7 @@
+iptables -A INPUT -s 192.168.0.25 -j DROP
+
+# -A = Append, adds rule to the chain
+#  apply rule to inbound traffic with INPUT
+# -s = source of traffic 
+# -j what target you want, in this case DROP will discard all traffic without 
+# sending a response to the sender
